@@ -10,14 +10,14 @@ const SearchBar = (props) => {
   return (
     <View style={styles.mainView}>
       <TextInput
-        placeholder="Write here..."
+        placeholder="Escribe..."
         color="black"
         style={styles.textInputStyles}
         onChangeText={handleChangeText}
         value={inputText}
       />
       <View style={styles.inputButton}>
-        <Button title="Add" color="black" onPress={handleAddItem} />
+        <Button title="+" color="white" onPress={handleAddItem} />
       </View>
     </View>
   );

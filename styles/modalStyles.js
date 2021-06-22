@@ -2,29 +2,52 @@ import {StyleSheet} from "react-native";
 
 const styles = StyleSheet.create({
     generalModalStyle: {
-      backgroundColor: "#ddc9b5"  
+      backgroundColor: "#ddc9b5",
+      flexDirection: "row" 
     },
     imageStyles: { 
+      marginTop: 60,
       marginLeft:15,
       marginRight:15,
-      width:400,
+      marginBottom: 15,
+      width:380,
       height: 300,
-      borderRadius: 10,
       alignItems: "center",
-    
+      borderRadius: 10,
+      
     }, 
+    titleStyles: {
+      paddingLeft: 20,
+      fontSize: 27,
+      fontWeight: "500"
+    },
     textStyles: {
-      marginTop: 50,
-      textAlign: "center",
-      fontSize: 30,
+      backgroundColor:  "#ddc9b5",
+      paddingLeft: 20,
+      paddingRight: 20,
+      fontSize: 25,
+      fontWeight: "400"
+    },
+    descriptionStyles: {
+      paddingLeft: 20,
+      marginTop: 5,
+      fontSize: 15,
+      maxWidth: 200
     },
     modalButton : {
-      backgroundColor: "#ac9780",
-      borderRadius: 8,
-      padding: 3,
-      maxWidth: 125,
-      marginLeft: 150
+      backgroundColor: "#ddc9b5",
+      marginTop: 40,
+      marginLeft: 55,
+      padding: 5,
+      borderRadius: 20, 
+      width: 300,
+     
     },
+    informationStyles: {
+      flexDirection:'row' ,
+      justifyContent: "space-between",
+      
+    }
   })
   
   export default styles;

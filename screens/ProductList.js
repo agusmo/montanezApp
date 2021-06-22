@@ -11,9 +11,10 @@ import React from "react";
 import styles from "../styles/productListStyles";
 
 const ProductLists = (props) => {
-  const { handleModal, products, handleDeleteItem, itemSelected } = props;
+  const { handleModal, products, handleDeleteItem } = props;
   const productImage =
     "https://previews.123rf.com/images/decobrush/decobrush1711/decobrush171100011/90847145-cupcake-icon-icono-de-cumplea%C3%B1os-s%C3%ADmbolo-de-vacaciones-y-amor-d%C3%ADa-de-san-valent%C3%ADn-l%C3%ADnea-delgada-muestra-vector-.jpg";
+  
 
   return (
     <FlatList
