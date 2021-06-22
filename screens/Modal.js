@@ -24,13 +24,12 @@ const ModalItem = (props) => {
       <View style={styles.informationStyles}>
         <Text style={styles.titleStyles}>{itemSelected.name}</Text>
         <Text style={styles.textStyles}>
-          {itemSelected.price ? itemSelected.price : "$" + productRandomPrice}
+          {itemSelected.price}
         </Text>
       </View>
       <Text style={styles.descriptionStyles}>
         {itemSelected.description
-          ? itemSelected.description
-          : "No hay descripción para este producto"}
+         }
       </Text>
       <View style={styles.modalButton}>
         <Button

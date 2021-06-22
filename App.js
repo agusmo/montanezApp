@@ -22,7 +22,10 @@ export default function App() {
     if (inputText) {
       setProducts([
         ...products,
-        { id: Math.random().toString(), name: inputText },
+        { id: Math.random().toString(),
+          name: inputText,
+          description: "Este producto no posee descripción", 
+          price: "$"+Math.round(Math.random() * 10)},
       ]);
     }
     setInputText("");
