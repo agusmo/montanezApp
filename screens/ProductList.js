@@ -4,7 +4,7 @@ import {
   FlatList,
   Image,
   TouchableOpacity,
-  Button
+  Button,
 } from "react-native";
 import React from "react";
 // import products from "./data/FlatlistData";
@@ -14,7 +14,6 @@ const ProductLists = (props) => {
   const { handleModal, products, handleDeleteItem } = props;
   const productImage =
     "https://previews.123rf.com/images/decobrush/decobrush1711/decobrush171100011/90847145-cupcake-icon-icono-de-cumplea%C3%B1os-s%C3%ADmbolo-de-vacaciones-y-amor-d%C3%ADa-de-san-valent%C3%ADn-l%C3%ADnea-delgada-muestra-vector-.jpg";
-  
 
   return (
     <FlatList
@@ -33,10 +32,10 @@ const ProductLists = (props) => {
               ></Image>
               <Text style={styles.textStyles}>{item.name}</Text>
               <Button
-            color="white"
-            onPress={() => handleDeleteItem(item.id)}
-            title="X"
-          ></Button>
+                color="white"
+                onPress={() => handleDeleteItem(item.id)}
+                title="X"
+              ></Button>
             </View>
           </TouchableOpacity>
         );

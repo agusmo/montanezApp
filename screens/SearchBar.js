@@ -2,7 +2,7 @@ import React from "react";
 
 import { Button, TextInput, View } from "react-native";
 
-import styles from "../styles/searchBarStyles"
+import styles from "../styles/searchBarStyles";
 
 const SearchBar = (props) => {
   const { handleChangeText, handleAddItem, inputText } = props;
@@ -23,5 +23,4 @@ const SearchBar = (props) => {
   );
 };
 
- 
-export default SearchBar
+export default SearchBar;
