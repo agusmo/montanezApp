@@ -29,13 +29,13 @@ const ProductLists = (props) => {
               <Image
                 style={styles.imageStyles}
                 source={{ uri: item.imageUrl ? item.imageUrl : productImage }}
-              ></Image>
+              />
               <Text style={styles.textStyles}>{item.name}</Text>
               <Button
                 color="white"
                 onPress={() => handleDeleteItem(item.id)}
                 title="X"
-              ></Button>
+              />
             </View>
           </TouchableOpacity>
         );
