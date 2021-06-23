@@ -6,6 +6,8 @@ import SearchBar from "./screens/SearchBar";
 import ModalItem from "./screens/Modal";
 import mockData from "./screens/data/FlatlistData";
 import styles from "./styles/mainScreenStyles";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [modalVisible, setModalVisible] = useState(false);
@@ -51,7 +53,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Bakery</Text>
+      <Header title="Bakery"/>
       <SearchBar
         handleChangeText={handleChangeText}
         inputText={inputText}
@@ -68,6 +70,7 @@ export default function App() {
         itemSelected={itemSelected}
         handleCloseModal={handleCloseModal}
       />
+      <Footer text="Footer text"/>
       <StatusBar style="dark" />
     </View>
   );

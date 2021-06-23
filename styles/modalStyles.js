@@ -4,6 +4,7 @@ import Colors from "../constants/colors"
 const styles = StyleSheet.create({
   generalModalStyle: {
     backgroundColor: Colors.light, 
+    height: 300,
   },
   imageStyles: {
     marginTop: 60,
@@ -45,6 +46,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
+  modalFooterStyles: {
+    maxHeight: 1
+  }
 });
 
 export default styles;

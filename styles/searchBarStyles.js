@@ -9,6 +9,8 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginHorizontal: 10,
     paddingBottom: 10,
+    borderBottomColor: Colors.deepLight,
+    borderBottomWidth: 1
   },
 
   textInputStyles: {

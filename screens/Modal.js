@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Text, Modal, View, Image } from "react-native";
 import styles from "../styles/modalStyles";
 
+
 const ModalItem = (props) => {
   const { modalVisible, itemSelected, handleCloseModal } = props;
   const productImage =
@@ -9,10 +10,10 @@ const ModalItem = (props) => {
   // //si uso esta function dentro del renderizado condicional se me ejecuta la funcion cada vez que abro el modal, por ende el precio cambia. Solucionado en el addItemHandler
   // const productRandomPrice = Math.round(Math.random() * 10);
   return (
-    <Modal
+            <Modal
       animationType="slide"
       visible={modalVisible}
-      style={styles.generalModalStyle}
+    
     >
       <Image
         style={styles.imageStyles}
@@ -33,6 +34,10 @@ const ModalItem = (props) => {
         />
       </View>
     </Modal>
+    
+
+   
+ 
   );
 };
 

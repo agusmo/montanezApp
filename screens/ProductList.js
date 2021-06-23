@@ -9,6 +9,7 @@ import {
 import React from "react";
 // import products from "./data/FlatlistData";
 import styles from "../styles/productListStyles";
+import Footer from "../components/Footer"
 
 const ProductLists = (props) => {
   const { handleModal, products, handleDeleteItem } = props;
