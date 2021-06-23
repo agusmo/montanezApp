@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
+import Colors from "../constants/colors"
 
 const styles = StyleSheet.create({
   mainView: {
-    backgroundColor: "#ddc9b5",
+    backgroundColor: Colors.medium,
     marginLeft: 15,
     marginRight: 15,
     marginTop: 10,
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
 
   textStyles: {
     fontSize: 23,
-    color: "black",
+    color: Colors.accent,
     marginLeft: 10,
     marginRight: 10,
   },

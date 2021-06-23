@@ -1,9 +1,9 @@
 import { StyleSheet } from "react-native";
+import Colors from "../constants/colors"
 
 const styles = StyleSheet.create({
   generalModalStyle: {
-    backgroundColor: "#ddc9b5",
-    flexDirection: "row",
+    backgroundColor: Colors.light, 
   },
   imageStyles: {
     marginTop: 60,
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   textStyles: {
-    backgroundColor: "#ddc9b5",
+    backgroundColor: Colors.medium,
     paddingLeft: 20,
     paddingRight: 20,
     fontSize: 25,
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     maxWidth: 200,
   },
   modalButton: {
-    backgroundColor: "#ddc9b5",
+    backgroundColor:Colors.medium,
     marginTop: 40,
     marginLeft: 55,
     padding: 5,

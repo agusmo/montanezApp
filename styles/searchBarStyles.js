@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Colors from "../constants/colors"
 
 const styles = StyleSheet.create({
   mainView: {
@@ -11,8 +12,8 @@ const styles = StyleSheet.create({
   },
 
   textInputStyles: {
-    backgroundColor: "#ddc9b5",
-    color: "black",
+    backgroundColor: Colors.medium,
+    color: Colors.accent,
     borderRadius: 8,
     fontSize: 20,
     width: 300,
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
   },
 
   inputButton: {
-    backgroundColor: "#ddc9b5",
+    backgroundColor: Colors.medium,
     width: 75,
     borderRadius: 8,
     padding: 8,
