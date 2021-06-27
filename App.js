@@ -8,18 +8,18 @@ import mockData from "./screens/data/FlatlistFoodData";
 import styles from "./styles/mainScreenStyles";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-// import { useFonts }  from "expo-font";
-// import { AppLoading } from "expo";
+import AppLoading from 'expo-app-loading';
+import { useFonts } from 'expo-font';
 
 
-export default function App() {
+export default function App ({props}) {
   const [modalVisible, setModalVisible] = useState(false);
   const [itemSelected, setItemSelected] = useState({});
   const [inputText, setInputText] = useState("");
   const [products, setProducts] = useState(mockData);
-  // const [dataLoaded]= useFonts({
-  //   "Playfair": require('./assets/fonts/static/PlayfairDisplay-Regular.ttf')
-  // })
+  const [dataLoaded]= useFonts({
+    'PlayfairDisplay-VariableFont': require('./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf'),
+  })
 
 
 
@@ -60,9 +60,11 @@ export default function App() {
     setItemSelected({});
   };
 
-
+  if (!dataLoaded) {
+    return <AppLoading />;
+  } else {
    return (
-    <View style={styles.container}>
+    <View style={styles.container} >
       <Header title="Bakery"/>
       <SearchBar
         handleChangeText={handleChangeText}
@@ -86,3 +88,4 @@ export default function App() {
     </View>
   );
 }
+};

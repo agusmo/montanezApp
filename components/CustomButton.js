@@ -14,7 +14,8 @@ const CustomButton = props => {
 const styles = StyleSheet.create({
     customButtonStyles: {
     backgroundColor: Colors.medium,
-    borderRadius: 10
+    borderRadius: 10,
+    
     },
 })
 

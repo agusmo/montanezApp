@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
   generalModalStyle: {
     backgroundColor: Colors.light, 
     height: 300,
+    
   },
   imageStyles: {
     marginTop: 60,
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
   titleStyles: {
     paddingLeft: 20,
     fontSize: 27,
-    fontWeight: "500",
+    fontFamily: 'PlayfairDisplay-VariableFont'
   },
   textStyles: {
     backgroundColor: Colors.medium,
@@ -27,26 +28,27 @@ const styles = StyleSheet.create({
     paddingRight: 20,
     fontSize: 25,
     fontWeight: "400",
+    fontFamily: 'PlayfairDisplay-VariableFont'
   },
   descriptionStyles: {
     paddingLeft: 20,
     marginTop: 5,
     fontSize: 15,
     maxWidth: 200,
+    fontFamily: 'PlayfairDisplay-VariableFont'
   },
   customButtonStyles: {
     marginTop: 40,
     marginLeft: 55,
     padding: 5,
     width: 300,
+   
+    
   },
   informationStyles: {
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  modalFooterStyles: {
-    maxHeight: 1
-  }
 });
 
 export default styles;

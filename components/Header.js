@@ -19,10 +19,12 @@ header: {
     backgroundColor: Colors.light,
     alignItems: "center",
     justifyContent: "center",
+    
 },
 headerTitle :{
     color: "black",
-    fontSize: 40
+    fontSize: 40,
+    fontFamily: 'PlayfairDisplay-VariableFont'
 } 
 })
 
