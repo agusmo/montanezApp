@@ -22,10 +22,8 @@ const styles = StyleSheet.create({
     padding: 15,
   },
 
-  inputButton: {
-    backgroundColor: Colors.medium,
+  customButtonStyles: {
     width: 75,
-    borderRadius: 8,
     padding: 8,
   },
 });

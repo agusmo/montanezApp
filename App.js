@@ -1,19 +1,28 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { Text, View } from "react-native";
-import ProductLists from "./screens/ProductList";
+import ProductLists from "./screens/ProductFoodList";
 import SearchBar from "./screens/SearchBar";
 import ModalItem from "./screens/Modal";
-import mockData from "./screens/data/FlatlistData";
+import mockData from "./screens/data/FlatlistFoodData";
 import styles from "./styles/mainScreenStyles";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+// import { useFonts }  from "expo-font";
+// import { AppLoading } from "expo";
+
 
 export default function App() {
   const [modalVisible, setModalVisible] = useState(false);
   const [itemSelected, setItemSelected] = useState({});
   const [inputText, setInputText] = useState("");
   const [products, setProducts] = useState(mockData);
+  // const [dataLoaded]= useFonts({
+  //   "Playfair": require('./assets/fonts/static/PlayfairDisplay-Regular.ttf')
+  // })
+
+
+
 
   const handleChangeText = (text) => {
     setInputText(text);
@@ -51,7 +60,8 @@ export default function App() {
     setItemSelected({});
   };
 
-  return (
+
+   return (
     <View style={styles.container}>
       <Header title="Bakery"/>
       <SearchBar
@@ -59,6 +69,7 @@ export default function App() {
         inputText={inputText}
         handleAddItem={handleAddItem}
       />
+      
       <ProductLists
         handleModal={handleModal}
         products={products}

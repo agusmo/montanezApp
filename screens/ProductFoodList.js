@@ -7,8 +7,8 @@ import {
   Button,
 } from "react-native";
 import React from "react";
-// import products from "./data/FlatlistData";
 import styles from "../styles/productListStyles";
+import Card from "../components/flatListCard"
 import Footer from "../components/Footer"
 
 const ProductLists = (props) => {
@@ -26,7 +26,8 @@ const ProductLists = (props) => {
               handleModal(item.id);
             }}
           >
-            <View style={styles.mainView}>
+            
+            <Card style={styles.cardStyles}>
               <Image
                 style={styles.imageStyles}
                 source={{ uri: item.imageUrl ? item.imageUrl : productImage }}
@@ -37,7 +38,7 @@ const ProductLists = (props) => {
                 onPress={() => handleDeleteItem(item.id)}
                 title="X"
               />
-            </View>
+            </Card>
           </TouchableOpacity>
         );
       }}

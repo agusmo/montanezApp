@@ -34,12 +34,10 @@ const styles = StyleSheet.create({
     fontSize: 15,
     maxWidth: 200,
   },
-  modalButton: {
-    backgroundColor:Colors.medium,
+  customButtonStyles: {
     marginTop: 40,
     marginLeft: 55,
     padding: 5,
-    borderRadius: 20,
     width: 300,
   },
   informationStyles: {

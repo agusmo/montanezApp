@@ -6,14 +6,14 @@ console.log(Colors)
 
 const Footer = ({text}) => {
     return (
-        <View style={styles.header}>
-            <Text style={styles.headerTitle}>{text}</Text>
+        <View style={styles.footer}>
+            <Text style={styles.footerTitle}>{text}</Text>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-header: {
+    footer: {
     width: "100%",
     height: 75,
     backgroundColor: Colors.light,
@@ -22,7 +22,7 @@ header: {
     alignItems: "center",
     justifyContent: "center",
 },
-headerTitle :{
+footerTitle :{
     color: "black",
     fontSize: 20
 } 

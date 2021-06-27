@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Text, Modal, View, Image } from "react-native";
 import styles from "../styles/modalStyles";
+import CustomButton from "../components/CustomButton"
 
 
 const ModalItem = (props) => {
@@ -26,13 +27,13 @@ const ModalItem = (props) => {
         <Text style={styles.textStyles}>{itemSelected.price}</Text>
       </View>
       <Text style={styles.descriptionStyles}>{itemSelected.description}</Text>
-      <View style={styles.modalButton}>
+      <CustomButton style={styles.customButtonStyles}>
         <Button
           color="black"
           onPress={() => handleCloseModal(itemSelected.id)}
           title="Cerrar"
         />
-      </View>
+      </CustomButton>
     </Modal>
     
 

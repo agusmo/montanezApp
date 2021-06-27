@@ -2,18 +2,8 @@ import { StyleSheet } from "react-native";
 import Colors from "../constants/colors"
 
 const styles = StyleSheet.create({
-  mainView: {
+   cardStyles: {
     backgroundColor: Colors.medium,
-    marginLeft: 15,
-    marginRight: 15,
-    marginTop: 10,
-    marginBottom: 10,
-    paddingTop: 10,
-    paddingBottom: 15,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-around",
-    borderRadius: 15,
   },
 
   textStyles: {

@@ -4,6 +4,8 @@ import { Button, TextInput, View } from "react-native";
 
 import styles from "../styles/searchBarStyles";
 
+import CustomButton from "../components/CustomButton"
+
 const SearchBar = (props) => {
   const { handleChangeText, handleAddItem, inputText } = props;
 
@@ -16,9 +18,9 @@ const SearchBar = (props) => {
         onChangeText={handleChangeText}
         value={inputText}
       />
-      <View style={styles.inputButton}>
+      <CustomButton style={styles.customButtonStyles}>
         <Button title="+" color="white" onPress={handleAddItem} />
-      </View>
+      </CustomButton>
     </View>
   );
 };
