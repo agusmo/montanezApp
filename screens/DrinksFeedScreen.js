@@ -3,24 +3,22 @@ import React, { useState } from "react";
 import { View } from "react-native";
 import ProductLists from "../components/ProductFlatList";
 import SearchBar from "../components/SearchBar";
-import ModalItem from "../screens/Modal";
-import mockData from "../screens/data/FlatListDrinksData";
+import ModalItem from "./Modal";
+import mockData from "./data/FlatListDrinksData";
 import styles from "../styles/appGeneralStyles";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import AppLoading from 'expo-app-loading';
-import { useFonts } from 'expo-font';
+import AppLoading from "expo-app-loading";
+import { useFonts } from "expo-font";
 
-
-export default function DrinksFeedScreen ({props}) {
+export default function FoodFeedScreen({ props }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [itemSelected, setItemSelected] = useState({});
   const [inputText, setInputText] = useState("");
   const [products, setProducts] = useState(mockData);
-  const [dataLoaded]= useFonts({
-    'PlayfairDisplay-VariableFont': require('../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf'),
-  })
-
+  const [dataLoaded] = useFonts({
+    "PlayfairDisplay-VariableFont": require("../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf"),
+  });
 
   const handleChangeText = (text) => {
     setInputText(text);
@@ -61,29 +59,29 @@ export default function DrinksFeedScreen ({props}) {
   if (!dataLoaded) {
     return <AppLoading />;
   } else {
-   return (
-    <View style={styles.container} >
-      <Header title="Cafeteria"/>
-      <SearchBar
-        handleChangeText={handleChangeText}
-        inputText={inputText}
-        handleAddItem={handleAddItem}
-      />
-      
-      <ProductLists
-        handleModal={handleModal}
-        products={products}
-        handleDeleteItem={handleDeleteItem}
-        itemSelected={itemSelected}
-      />
-      <ModalItem
-        modalVisible={modalVisible}
-        itemSelected={itemSelected}
-        handleCloseModal={handleCloseModal}
-      />
-      <Footer text="Footer text"/>
-      <StatusBar style="dark" />
-    </View>
-  );
+    return (
+      <View style={styles.container}>
+        <Header title="Coffee & more" />
+        <SearchBar
+          handleChangeText={handleChangeText}
+          inputText={inputText}
+          handleAddItem={handleAddItem}
+        />
+
+        <ProductLists
+          handleModal={handleModal}
+          products={products}
+          handleDeleteItem={handleDeleteItem}
+          itemSelected={itemSelected}
+        />
+        <ModalItem
+          modalVisible={modalVisible}
+          itemSelected={itemSelected}
+          handleCloseModal={handleCloseModal}
+        />
+        <Footer text="Footer text" />
+        <StatusBar style="dark" />
+      </View>
+    );
+  }
 }
-};

@@ -9,6 +9,7 @@ import CustomButton from "./CustomButton"
 const SearchBar = (props) => {
   const { handleChangeText, handleAddItem, inputText } = props;
 
+  
   return (
     <View style={styles.mainView}>
       <TextInput
