@@ -19,9 +19,10 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         paddingTop: 10,
         paddingBottom: 15,
+        paddingHorizontal: 15,
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
         borderRadius: 15,
     },
 })

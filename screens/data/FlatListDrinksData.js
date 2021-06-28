@@ -5,7 +5,7 @@ const mockData = [
       price: "$3",
       description: "Granos molidos de Colombia",
       imageUrl:
-        "https://as2.ftcdn.net/jpg/00/27/28/29/220_F_27282940_RLisLpuObpi9V4FZn1QuisHDZdVKXqGp.jpg",
+        "https://thumbs.dreamstime.com/b/taza-de-caf%C3%A9-35737898.jpg",
     },
     {
       name: "Café Latte",
@@ -13,15 +13,15 @@ const mockData = [
       price: "$3.5",
       description: "Café con leche",
       imageUrl:
-        "https://media.istockphoto.com/photos/italian-cannoli-picture-id525615039",
+        "https://thumbs.dreamstime.com/b/arte-caliente-del-latte-capuchino-caf%C3%A9-aislado-en-el-fondo-blanco-trayectoria-100281283.jpg",
     },
     {
-      name: "Capuccino",
+      name: "Café helado",
       id: "3",
       price: "$4",
-      description: "Café con leche y chocolate",
+      description: "Café con leche frío",
       imageUrl:
-        "https://thumbs.dreamstime.com/b/french-macaron-cookies-colorful-pastel-39852149.jpg",
+        "https://thumbs.dreamstime.com/b/latte-helado-del-caf%C3%A9-en-la-taza-pl%C3%A1stica-aislada-en-el-fondo-blanco-c-89389759.jpg",
     },
     {
       name: "Jugo de Naranja",
@@ -29,7 +29,7 @@ const mockData = [
       price: "$3",
       description: "Naranjas exprimidas",
       imageUrl:
-        "https://media.istockphoto.com/photos/churros-isolated-on-white-background-picture-id615739438",
+        "https://media.istockphoto.com/photos/orange-juice-in-glass-isolated-on-white-background-picture-id946905372?b=1&k=6&m=946905372&s=612x612&w=0&h=8F16b0fPjml8S0109HbIOw2c1GiFt4MqFxO4CuwZW6Q=",
     },
     {
       name: "Jugo de Manzana",
@@ -37,7 +37,7 @@ const mockData = [
       price: "$8",
       description: "Jugo de manzanas rojas",
       imageUrl:
-        "https://0bb8856ba8259ec33e3d-a40599a114f3a4c6d0979c3ffe0b2bf5.ssl.cf2.rackcdn.com/0263610000000_CL_hyvee_default_large.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsLH09gPrxr3wl_u2bJp3RAcjAATmU23HcVUw6zTc59F6oUhhYlDWIgluxBFmZiNyJCzg&usqp=CAU",
     },
     {
       name: "Agua",
@@ -45,7 +45,7 @@ const mockData = [
       price: "$8",
       description: "Agua mineral fresca",
       imageUrl:
-        "https://media.istockphoto.com/photos/classic-cheesecake-with-cherry-sauce-picture-id1093880340?k=6&m=1093880340&s=612x612&w=0&h=nGkC6zlQDWNPSNg8NOw6WCRTIzY9bFKJznHDqRImGvU=",
+        "https://media.istockphoto.com/photos/glass-of-water-on-isolate-background-picture-id1133156053?k=6&m=1133156053&s=612x612&w=0&h=d26nPovD4cmOvNAZZU8Bvm1w6T1AjhyLzI8qjpHqMVM=",
     },
   ];
   

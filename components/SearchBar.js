@@ -4,7 +4,7 @@ import { Button, TextInput, View } from "react-native";
 
 import styles from "../styles/searchBarStyles";
 
-import CustomButton from "../components/CustomButton"
+import CustomButton from "./CustomButton"
 
 const SearchBar = (props) => {
   const { handleChangeText, handleAddItem, inputText } = props;

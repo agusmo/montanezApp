@@ -8,8 +8,7 @@ import {
 } from "react-native";
 import React from "react";
 import styles from "../styles/productListStyles";
-import Card from "../components/flatListCard"
-import Footer from "../components/Footer"
+import Card from "../components/flatListCard";
 
 const ProductLists = (props) => {
   const { handleModal, products, handleDeleteItem } = props;
@@ -26,7 +25,6 @@ const ProductLists = (props) => {
               handleModal(item.id);
             }}
           >
-            
             <Card style={styles.cardStyles}>
               <Image
                 style={styles.imageStyles}
