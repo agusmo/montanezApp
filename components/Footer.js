@@ -1,6 +1,5 @@
 import React from "react"
-import * as RootNavigation from "../navigation/RootNavigation"
-import {View, Button, StyleSheet} from "react-native"
+import {View, StyleSheet} from "react-native"
 import Colors from "../constants/colors"
 
 

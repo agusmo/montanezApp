@@ -7,7 +7,6 @@ import SearchBar from "../components/SearchBar";
 import ModalItem from "./Modal";
 import mockData from "./data/FlatlistFoodData";
 import styles from "../styles/appGeneralStyles";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";

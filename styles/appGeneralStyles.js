@@ -6,11 +6,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor:  Colors.light,
     paddingTop: 10, 
-  },
-  headerTitleStyles : {
-    color: "black",
-    fontSize: 30,
-    fontFamily: "PlayfairDisplay-VariableFont",
   }
 });
 

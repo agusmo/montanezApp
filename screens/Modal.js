@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Text, Modal, View, Image } from "react-native";
 import styles from "../styles/modalStyles";
 import CustomButton from "../components/CustomButton";
-import Footer from "../components/Footer";
+
 
 const ModalItem = (props) => {
   const { modalVisible, itemSelected, handleCloseModal } = props;

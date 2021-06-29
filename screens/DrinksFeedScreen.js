@@ -7,7 +7,6 @@ import SearchBar from "../components/SearchBar";
 import ModalItem from "./Modal";
 import mockData from "./data/FlatListDrinksData";
 import styles from "../styles/appGeneralStyles";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
@@ -80,7 +79,7 @@ export default function FoodFeedScreen({ props }) {
           handleCloseModal={handleCloseModal}
         />
         <Footer>
-        <Button title="Home" color="black" onPress={() => RootNavigation.navigate('Main')}/>
+        <Button title="Home" color="black"  onPress={() => RootNavigation.navigate('Main')}/>
         <Button title="Bakery" color="black" onPress={() => RootNavigation.navigate('Bakery')}/>  
         </Footer>
         <StatusBar style="dark" />
