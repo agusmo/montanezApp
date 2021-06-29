@@ -62,7 +62,6 @@ export default function FoodFeedScreen({ props }) {
   } else {
     return (
       <View style={styles.container}>
-        <Header title="Coffee & more" />
         <SearchBar
           handleChangeText={handleChangeText}
           inputText={inputText}
