@@ -1,7 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { View } from "react-native";
+import { View, Button } from "react-native";
 import ProductLists from "../components/ProductFlatList";
+import * as RootNavigation from "../navigation/RootNavigation"
 import SearchBar from "../components/SearchBar";
 import ModalItem from "./Modal";
 import mockData from "./data/FlatlistFoodData";
@@ -79,7 +80,10 @@ export default function FoodFeedScreen({ props }) {
           itemSelected={itemSelected}
           handleCloseModal={handleCloseModal}
         />
-        <Footer text="Footer text" />
+        <Footer>
+        <Button title="Home" color="black" onPress={() => RootNavigation.navigate('Main')}/>
+        <Button title="Cafeteria" color="black" onPress={() => RootNavigation.navigate('Cafeteria')}/>
+        </Footer>
         <StatusBar style="dark" />
       </View>
     );

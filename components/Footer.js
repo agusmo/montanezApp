@@ -1,26 +1,27 @@
 import React from "react"
-import {View, Text, StyleSheet} from "react-native"
+import * as RootNavigation from "../navigation/RootNavigation"
+import {View, Button, StyleSheet} from "react-native"
 import Colors from "../constants/colors"
-console.log(Colors)
 
 
-const Footer = ({text}) => {
+const Footer = (props) => {
     return (
         <View style={styles.footer}>
-            <Text style={styles.footerTitle}>{text}</Text>
+            {props.children}
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    footer: {
+    footer: {     
     width: "100%",
     height: 75,
     backgroundColor: Colors.light,
     borderTopWidth: .5,
     borderTopColor: Colors.deepLight,
+    flexDirection: "row",
+    justifyContent: "space-around",
     alignItems: "center",
-    justifyContent: "center",
 },
 footerTitle :{
     color: "black",

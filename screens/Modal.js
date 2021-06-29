@@ -1,21 +1,16 @@
 import React from "react";
 import { Button, Text, Modal, View, Image } from "react-native";
 import styles from "../styles/modalStyles";
-import CustomButton from "../components/CustomButton"
-
+import CustomButton from "../components/CustomButton";
+import Footer from "../components/Footer";
 
 const ModalItem = (props) => {
   const { modalVisible, itemSelected, handleCloseModal } = props;
   const productImage =
     "https://previews.123rf.com/images/decobrush/decobrush1711/decobrush171100011/90847145-cupcake-icon-icono-de-cumplea%C3%B1os-s%C3%ADmbolo-de-vacaciones-y-amor-d%C3%ADa-de-san-valent%C3%ADn-l%C3%ADnea-delgada-muestra-vector-.jpg";
-  // //si uso esta function dentro del renderizado condicional se me ejecuta la funcion cada vez que abro el modal, por ende el precio cambia. Solucionado en el addItemHandler
-  // const productRandomPrice = Math.round(Math.random() * 10);
+
   return (
-            <Modal
-      animationType="slide"
-      visible={modalVisible}
-    
-    >
+    <Modal animationType="slide" visible={modalVisible}>
       <Image
         style={styles.imageStyles}
         source={{
@@ -34,11 +29,8 @@ const ModalItem = (props) => {
           title="Cerrar"
         />
       </CustomButton>
+     
     </Modal>
-    
-
-   
- 
   );
 };
 
