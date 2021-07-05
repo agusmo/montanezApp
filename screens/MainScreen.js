@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Button } from "react-native";
+import { View, Button, TouchableOpacity, Text } from "react-native";
 import styles from "../styles/mainScreenStyles";
 import Header from "../components/Header";
 import CustomButton from "../components/CustomButton";
@@ -10,18 +10,18 @@ const MainScreen = ({ navigation }) => {
       <Header title="Bienvenidos" style={styles.header} />
       <View>
         <CustomButton style={styles.customButtonStyles}>
-          <Button
-            title="Ir a Bakery"
-            color="white"
-            onPress={() => navigation.navigate("Bakery")}
-          />
+          <TouchableOpacity onPress={() => navigation.navigate("Bakery")} >
+             <Text style={styles.buttonTextStyles}>
+              Ir a Bakery
+            </Text>
+          </TouchableOpacity>
         </CustomButton>
         <CustomButton style={styles.customButtonStyles}>
-          <Button
-            title="Ir a Cafetería"
-            color="white"
-            onPress={() => navigation.navigate("Cafeteria")}
-          />
+        <TouchableOpacity onPress={() => navigation.navigate("Cafeteria")} >
+             <Text style={styles.buttonTextStyles}>
+              Ir a Cafeteria
+            </Text>
+          </TouchableOpacity>
         </CustomButton>
       </View>
     </View>

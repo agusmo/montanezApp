@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Text, Modal, View, Image } from "react-native";
+import { Button, Text, Modal, View, Image, TouchableOpacity } from "react-native";
 import styles from "../styles/modalStyles";
 import CustomButton from "../components/CustomButton";
 
@@ -23,11 +23,11 @@ const ModalItem = (props) => {
       </View>
       <Text style={styles.descriptionStyles}>{itemSelected.description}</Text>
       <CustomButton style={styles.customButtonStyles}>
-        <Button
-          color="black"
-          onPress={() => handleCloseModal(itemSelected.id)}
-          title="Cerrar"
-        />
+      <TouchableOpacity onPress={() =>  handleCloseModal(itemSelected.id)} >
+             <Text style={styles.buttonTextStyles}>
+              Cerrar
+            </Text>
+      </TouchableOpacity>
       </CustomButton>
      
     </Modal>

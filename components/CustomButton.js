@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.medium,
     borderRadius: 10,
   },
+  buttonTextStyles: {
+    color: "white"
+  }
 });
 
 export default CustomButton;

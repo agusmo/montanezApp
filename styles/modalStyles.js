@@ -1,19 +1,14 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import Colors from "../constants/colors"
 
 const styles = StyleSheet.create({
-  generalModalStyle: {
-    backgroundColor: Colors.light, 
-    height: 300,
-    
-  },
   imageStyles: {
-    marginTop: 60,
+    marginTop: "15%",
     marginLeft: 15,
     marginRight: 15,
     marginBottom: 15,
-    width: 380,
-    height: 300,
+    width: Dimensions.get("window").width/1.075,
+    height: Dimensions.get("window").width/1.5,
     alignItems: "center",
     borderRadius: 10,
   },
@@ -44,6 +39,11 @@ const styles = StyleSheet.create({
     width: 300,
    
     
+  },
+  buttonTextStyles: {
+    fontSize: 20,
+    textAlign: "center",
+    padding: 10,
   },
   informationStyles: {
     flexDirection: "row",

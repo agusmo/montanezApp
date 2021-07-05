@@ -1,14 +1,14 @@
-import { StyleSheet } from "react-native";
+import { useEffect } from "react";
+import { StyleSheet, Dimensions } from "react-native";
 import Colors from "../constants/colors"
 
 const styles = StyleSheet.create({
    cardStyles: {
     backgroundColor: Colors.medium,
   },
-
   textStyles: {
-    fontSize: 23,
     color: Colors.accent,
+    fontSize: 23,
     marginLeft: 10,
     marginRight: 10,
     fontFamily: 'PlayfairDisplay-VariableFont'
@@ -16,10 +16,15 @@ const styles = StyleSheet.create({
 
   imageStyles: {
     marginRight: 15,
-    width: 125,
-    height: 125,
+    width:  Dimensions.get("window").width/3.4,
+    height: Dimensions.get("window").width/3.4,
     borderRadius: 10,
   },
+  buttonTextStyles: {
+    color: "white",
+    fontSize: 20,
+    marginRight: 10
+  }
 });
 
 export default styles;

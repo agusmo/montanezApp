@@ -24,8 +24,15 @@ const styles = StyleSheet.create({
 
   customButtonStyles: {
     width: 75,
+    maxWidth: 75,
     padding: 8,
   },
+  buttonTextStyles: {
+    color: "white",
+    fontSize: 20,
+    textAlign: "center",
+    paddingVertical: 7.5
+  }
 });
 
 export default styles;

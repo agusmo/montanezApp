@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import Colors from "../constants/colors";
 
 const styles = StyleSheet.create({
@@ -9,10 +9,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   customButtonStyles: {
-    padding: 25,
-    width: 300,
-    marginVertical: 15,
+    width: Dimensions.get("window").width/1.5 ,
+    marginVertical: "4%",
+    padding: "7%",
   },
+  buttonTextStyles: {
+    color: "white",
+    fontSize: 20,
+    textAlign: "center",
+  }
 });
 
 export default styles;

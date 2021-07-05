@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { View, Button } from "react-native";
+import { View, TouchableOpacity, Text } from "react-native";
 import ProductLists from "../components/ProductFlatList";
 import * as RootNavigation from "../navigation/RootNavigation"
 import SearchBar from "../components/SearchBar";
@@ -23,6 +23,8 @@ export default function FoodFeedScreen({ props }) {
   const handleChangeText = (text) => {
     setInputText(text);
   };
+
+ 
 
   const handleAddItem = () => {
     if (inputText) {
@@ -65,6 +67,7 @@ export default function FoodFeedScreen({ props }) {
           handleChangeText={handleChangeText}
           inputText={inputText}
           handleAddItem={handleAddItem}
+         
         />
 
         <ProductLists
@@ -79,8 +82,16 @@ export default function FoodFeedScreen({ props }) {
           handleCloseModal={handleCloseModal}
         />
         <Footer>
-        <Button title="Home" color="black" onPress={() => RootNavigation.navigate('Main')}/>
-        <Button title="Cafeteria" color="black" onPress={() => RootNavigation.navigate('Cafeteria')}/>
+        <TouchableOpacity onPress={()=> RootNavigation.navigate('Main')} >
+             <Text>
+              Home
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={()=> RootNavigation.navigate('Cafeteria')} >
+             <Text>
+              Cafeteria
+            </Text>
+          </TouchableOpacity>
         </Footer>
         <StatusBar style="dark" />
       </View>
