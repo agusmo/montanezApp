@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    marginTop: 15,
     marginHorizontal: 10,
     paddingBottom: 10,
     borderBottomColor: Colors.deepLight,
@@ -22,7 +21,7 @@ const styles = StyleSheet.create({
     height:  55,
     color: Colors.accent,
     borderRadius: 8,
-    fontSize: 20,
+    fontSize: 20/fontScale,
     padding: 15,
   },
 
