@@ -1,6 +1,8 @@
 import { StyleSheet, Dimensions } from "react-native";
 import Colors from "../constants/colors"
 
+const {fontScale } = Dimensions.get("window");
+
 const styles = StyleSheet.create({
   imageStyles: {
     marginTop: "15%",
@@ -9,39 +11,36 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     width: Dimensions.get("window").width/1.075,
     height: Dimensions.get("window").width/1.5,
-    alignItems: "center",
     borderRadius: 10,
   },
   titleStyles: {
     paddingLeft: 20,
-    fontSize: 27,
+    fontSize: 27/fontScale,
     fontFamily: 'PlayfairDisplay-VariableFont'
   },
   textStyles: {
     backgroundColor: Colors.medium,
     paddingLeft: 20,
     paddingRight: 20,
-    fontSize: 25,
+    fontSize: 25/fontScale,
     fontWeight: "400",
     fontFamily: 'PlayfairDisplay-VariableFont'
   },
   descriptionStyles: {
     paddingLeft: 20,
     marginTop: 5,
-    fontSize: 15,
+    fontSize: 15/fontScale,
     maxWidth: 200,
     fontFamily: 'PlayfairDisplay-VariableFont'
   },
   customButtonStyles: {
+    marginLeft: 50,
     marginTop: 40,
-    marginLeft: 55,
     padding: 5,
-    width: 300,
-   
-    
+    width: 300/fontScale,
   },
   buttonTextStyles: {
-    fontSize: 20,
+    fontSize: 20/fontScale,
     textAlign: "center",
     padding: 10,
   },

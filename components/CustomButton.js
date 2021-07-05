@@ -14,6 +14,8 @@ const styles = StyleSheet.create({
   customButtonStyles: {
     backgroundColor: Colors.medium,
     borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
   buttonTextStyles: {
     color: "white"

@@ -18,7 +18,7 @@ export default function App() {
     "PlayfairDisplay-VariableFont": require("./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf"),
   });
 
-  const {fontScale } = Dimensions.get("window");
+  const {fontScale} = Dimensions.get("window");
 
   if (!dataLoaded) {
     return <AppLoading />;
