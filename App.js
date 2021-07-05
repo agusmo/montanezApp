@@ -1,6 +1,6 @@
 import { StatusBar, Image } from "expo-status-bar";
 import React from "react";
-import { View } from "react-native";
+import { View, Dimensions } from "react-native";
 import styles from "./styles/appGeneralStyles";
 import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
@@ -17,6 +17,8 @@ export default function App() {
   const [dataLoaded] = useFonts({
     "PlayfairDisplay-VariableFont": require("./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf"),
   });
+
+  const {fontScale } = Dimensions.get("window");
 
   if (!dataLoaded) {
     return <AppLoading />;
@@ -37,7 +39,7 @@ export default function App() {
                 title: "Coffee & more",
                 headerTitleStyle: {
                   color: "black",
-                  fontSize: 30,
+                  fontSize: 30/fontScale,
                   fontFamily: "PlayfairDisplay-VariableFont",
                 },
               }}
@@ -48,7 +50,7 @@ export default function App() {
               options={{
                 headerTitleStyle: {
                   color: "black",
-                  fontSize: 30,
+                  fontSize: 30/fontScale,
                   fontFamily: "PlayfairDisplay-VariableFont",
                 },
               }}

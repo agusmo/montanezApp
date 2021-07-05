@@ -1,5 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native";
 
+const {fontScale } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
     header: {
@@ -10,7 +11,7 @@ const styles = StyleSheet.create({
       },
       headerTitle: {
         color: "black",
-        fontSize: 40,
+        fontSize: 40/fontScale,
         fontFamily: "PlayfairDisplay-VariableFont",
       },
 });

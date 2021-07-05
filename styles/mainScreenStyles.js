@@ -1,6 +1,8 @@
 import { StyleSheet, Dimensions } from "react-native";
 import Colors from "../constants/colors";
 
+const {fontScale } = Dimensions.get("window");
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.light,
@@ -15,7 +17,7 @@ const styles = StyleSheet.create({
   },
   buttonTextStyles: {
     color: "white",
-    fontSize: 20,
+    fontSize: 20/fontScale ,
     textAlign: "center",
   }
 });

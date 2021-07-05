@@ -3,7 +3,7 @@ import { StyleSheet, Dimensions } from "react-native";
 import Colors from "../constants/colors"
 
 
-const { width, fontScale } = Dimensions.get("window");
+const {fontScale } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
    cardStyles: {
@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
   textStyles: {
     color: Colors.accent,
     fontSize: 23 / fontScale,
+    maxWidth: 110,
     marginLeft: 10,
     marginRight: 10,
     fontFamily: 'PlayfairDisplay-VariableFont'
