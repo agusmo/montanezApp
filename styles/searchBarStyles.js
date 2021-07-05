@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import Colors from "../constants/colors"
 
 const styles = StyleSheet.create({
@@ -15,15 +15,15 @@ const styles = StyleSheet.create({
 
   textInputStyles: {
     backgroundColor: Colors.medium,
+    width:  Dimensions.get("window").width/1.5,
     color: Colors.accent,
     borderRadius: 8,
     fontSize: 20,
-    width: 300,
     padding: 15,
   },
 
   customButtonStyles: {
-    width: 75,
+    width:  Dimensions.get("window").width/1.5,
     maxWidth: 75,
     padding: 8,
   },
