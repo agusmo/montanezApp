@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   customButtonStyles: {
     width: Dimensions.get("window").width/1.5 ,
     marginVertical: "4%",
-    padding: "7%",
+    padding: "6%",
   },
   buttonTextStyles: {
     color: "white",

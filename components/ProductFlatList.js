@@ -50,7 +50,7 @@ const ProductLists = (props) => {
                 // style={isPortrait ? styles.imageStyles : imageStylesLandscape}
                 source={{ uri: item.imageUrl ? item.imageUrl : productImage }}
               />
-              <Text style={styles.textStyles}>{item.name}</Text>
+              <Text style={styles.textStyles}  ellipsizeMode='tail' numberOfLines={1}>{item.name}</Text>
               <CustomButton style={styles.customButtonStyles}>
                 <TouchableOpacity onPress={() => handleDeleteItem(item.id)}>
                   <Text style={styles.buttonTextStyles}>X</Text>
