@@ -1,6 +1,9 @@
 import { StyleSheet, Dimensions } from "react-native";
 import Colors from "../constants/colors"
 
+const {fontScale } = Dimensions.get("window");
+
+
 const styles = StyleSheet.create({
   mainView: {
     flexDirection: "row",
@@ -16,6 +19,7 @@ const styles = StyleSheet.create({
   textInputStyles: {
     backgroundColor: Colors.medium,
     width:  Dimensions.get("window").width/1.5,
+    height:  55,
     color: Colors.accent,
     borderRadius: 8,
     fontSize: 20,
@@ -24,6 +28,7 @@ const styles = StyleSheet.create({
 
   customButtonStyles: {
     width:  Dimensions.get("window").width/1.5,
+    height:  55,
     maxWidth: 75,
     padding: 8,
   },
@@ -31,7 +36,6 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 20,
     textAlign: "center",
-    paddingVertical: 7.5
   }
 });
 
