@@ -1,10 +1,10 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 
 const styles = StyleSheet.create({
     header: {
         width: "100%",
-        height: "7%",
+        height:  Dimensions.get("window").width/5 ,
         alignItems: "center",
         justifyContent: "center",
       },
