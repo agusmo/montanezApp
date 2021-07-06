@@ -38,10 +38,11 @@ const styles = StyleSheet.create({
   },
   mainViewLandscape: {
     borderBottomColor: Colors.deepLight,
+    width:  "75%",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginHorizontal: 10,
+    paddingLeft: "25%",
     paddingBottom: 10,
     borderBottomWidth: 1
   }

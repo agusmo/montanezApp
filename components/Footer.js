@@ -24,10 +24,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
 },
-footerTitle :{
-    color: "black",
-    fontSize: 20
-} 
+
 })
 
 export default Footer
