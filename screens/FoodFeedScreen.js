@@ -24,8 +24,6 @@ export default function FoodFeedScreen({ props }) {
     setInputText(text);
   };
 
- 
-
   const handleAddItem = () => {
     if (inputText) {
       setProducts([

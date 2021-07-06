@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { View, Dimensions, SafeAreaView } from "react-native";
+import { Dimensions, SafeAreaView } from "react-native";
 import styles from "./styles/appGeneralStyles";
 import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";

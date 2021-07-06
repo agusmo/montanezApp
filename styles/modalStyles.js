@@ -48,6 +48,19 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
+  imageStylesLS: {
+    width: Dimensions.get("window").width/3,
+    height: Dimensions.get("window").width/4,
+    marginLeft: "35%",
+    marginRight: 15,
+  },
+  customButtonStylesLS: {
+    width: "25%",
+    padding: "1%",
+    margin: 15,
+    marginLeft: "40%"
+  }
+
 });
 
 export default styles;
