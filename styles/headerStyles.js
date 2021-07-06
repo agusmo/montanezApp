@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
         fontSize: 40/fontScale,
         fontFamily: "PlayfairDisplay-VariableFont",
       },
-  
 });
 
 export default styles;

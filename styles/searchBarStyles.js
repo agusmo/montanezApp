@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.medium,
     width:  Dimensions.get("window").width/1.5,
     height:  55,
+    marginRight: 10,
     color: Colors.accent,
     borderRadius: 8,
     fontSize: 20/fontScale,
@@ -26,9 +27,8 @@ const styles = StyleSheet.create({
   },
 
   customButtonStyles: {
-    width:  Dimensions.get("window").width/1.5,
+    width:  "20%",
     height:  55,
-    maxWidth: 75,
     padding: 8,
   },
   buttonTextStyles: {
