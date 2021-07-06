@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { View, TouchableOpacity, Text } from "react-native";
+import { View, TouchableOpacity, Text, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard } from "react-native";
 import ProductLists from "../components/ProductFlatList";
 import * as RootNavigation from "../navigation/RootNavigation"
 import SearchBar from "../components/SearchBar";
@@ -60,6 +60,11 @@ export default function FoodFeedScreen({ props }) {
     return <AppLoading />;
   } else {
     return (
+      <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={styles.container}
+    >
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
         <SearchBar
           handleChangeText={handleChangeText}
@@ -92,6 +97,8 @@ export default function FoodFeedScreen({ props }) {
         </Footer>
         <StatusBar style="dark" />
       </View>
+      </TouchableWithoutFeedback>
+     </KeyboardAvoidingView>
     );
   }
 }

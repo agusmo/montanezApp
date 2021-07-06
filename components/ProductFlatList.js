@@ -3,7 +3,6 @@ import {
   FlatList,
   Image,
   TouchableOpacity,
-  Button,
   Dimensions,
 } from "react-native";
 import React, { useEffect, useState } from "react";
@@ -43,7 +42,7 @@ const ProductLists = (props) => {
           >
             <Card
               style={styles.cardStyles}
-              // style={isPortrait ? styles.cardStyles : styles.cardStylesLandscape}
+              
             >
               <Image
                 style={styles.imageStyles}

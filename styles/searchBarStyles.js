@@ -6,12 +6,12 @@ const {fontScale } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   mainView: {
+    borderBottomColor: Colors.deepLight,
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
     marginHorizontal: 10,
     paddingBottom: 10,
-    borderBottomColor: Colors.deepLight,
     borderBottomWidth: 1
   },
 
@@ -35,6 +35,15 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 20,
     textAlign: "center",
+  },
+  mainViewLandscape: {
+    borderBottomColor: Colors.deepLight,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginHorizontal: 10,
+    paddingBottom: 10,
+    borderBottomWidth: 1
   }
 });
 

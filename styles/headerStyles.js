@@ -11,9 +11,11 @@ const styles = StyleSheet.create({
       },
       headerTitle: {
         color: "black",
+        textAlign: "center",
         fontSize: 40/fontScale,
         fontFamily: "PlayfairDisplay-VariableFont",
       },
+  
 });
 
 export default styles;

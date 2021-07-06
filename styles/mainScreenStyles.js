@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 20/fontScale ,
     textAlign: "center",
-  }
+  },
+ 
 });
 
 export default styles;
