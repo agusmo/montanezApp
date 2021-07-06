@@ -20,6 +20,17 @@ const styles = StyleSheet.create({
     fontSize: 20/fontScale ,
     textAlign: "center",
   },
+  containerLandscape: {
+    backgroundColor: Colors.light,
+    flex:1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  customButtonStylesLS: {
+    width: 300,
+    padding: "4%",
+    margin: 15
+  }
  
 });
 
