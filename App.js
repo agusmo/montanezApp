@@ -1,6 +1,6 @@
-import { StatusBar, Image } from "expo-status-bar";
+import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { View, Dimensions } from "react-native";
+import { View, Dimensions, SafeAreaView } from "react-native";
 import styles from "./styles/appGeneralStyles";
 import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
@@ -24,7 +24,7 @@ export default function App() {
     return <AppLoading />;
   } else {
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <NavigationContainer ref={navigationRef}>
           <Stack.Navigator>
             <Stack.Screen
@@ -58,7 +58,7 @@ export default function App() {
           </Stack.Navigator>
         </NavigationContainer>
         <StatusBar style="dark" />
-      </View>
+      </SafeAreaView>
     );
   }
 }

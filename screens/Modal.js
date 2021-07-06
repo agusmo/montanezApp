@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Text, Modal, View, Image, TouchableOpacity } from "react-native";
+import { Text, Modal, View, Image, TouchableOpacity } from "react-native";
 import styles from "../styles/modalStyles";
 import CustomButton from "../components/CustomButton";
 
