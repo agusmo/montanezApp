@@ -1,6 +1,7 @@
 import React from "react"
 import {View, StyleSheet, Dimensions} from "react-native"
 import Colors from "../constants/colors"
+import Constants from 'expo-constants';
 
 const {fontScale } = Dimensions.get("window");
 
@@ -15,7 +16,7 @@ const Footer = (props) => {
 const styles = StyleSheet.create({
     footer: {     
     width: "100%",
-    height: 75/fontScale,
+    height: Platform.OS === "ios" ? 50 : Constants.statusBarHeight,
     backgroundColor: Colors.light,
     borderTopWidth: .5,
     borderTopColor: Colors.deepLight,
