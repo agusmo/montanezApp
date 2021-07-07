@@ -1,8 +1,16 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { View, TouchableOpacity, Text, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard } from "react-native";
+import {
+  View,
+  TouchableOpacity,
+  Text,
+  KeyboardAvoidingView,
+  Platform,
+  TouchableWithoutFeedback,
+  Keyboard,
+} from "react-native";
 import ProductLists from "../components/ProductFlatList";
-import * as RootNavigation from "../navigation/RootNavigation"
+import * as RootNavigation from "../navigation/RootNavigation";
 import SearchBar from "../components/SearchBar";
 import ModalItem from "./Modal";
 import mockData from "./data/FlatlistFoodData";
@@ -10,6 +18,7 @@ import styles from "../styles/appGeneralStyles";
 import Footer from "../components/Footer";
 import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
+import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 
 export default function FoodFeedScreen({ props }) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -61,45 +70,47 @@ export default function FoodFeedScreen({ props }) {
   } else {
     return (
       <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
-      style={styles.container}
-    >
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <View style={styles.container}>
-        <SearchBar
-          handleChangeText={handleChangeText}
-          inputText={inputText}
-          handleAddItem={handleAddItem}
-         
-        />
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={styles.container}
+      >
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+          <View style={styles.container}>
+            <SearchBar
+              handleChangeText={handleChangeText}
+              inputText={inputText}
+              handleAddItem={handleAddItem}
+            />
 
-        <ProductLists
-          handleModal={handleModal}
-          products={products}
-          handleDeleteItem={handleDeleteItem}
-          itemSelected={itemSelected}
-        />
-        <ModalItem
-          modalVisible={modalVisible}
-          itemSelected={itemSelected}
-          handleCloseModal={handleCloseModal}
-        />
-        <Footer>
-        <TouchableOpacity onPress={()=> RootNavigation.navigate('Main')} >
-             <Text>
-              Home
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={()=> RootNavigation.navigate('Cafeteria')} >
-             <Text>
-              Cafeteria
-            </Text>
-          </TouchableOpacity>
-        </Footer>
-        <StatusBar style="dark" />
-      </View>
-      </TouchableWithoutFeedback>
-     </KeyboardAvoidingView>
+            <ProductLists
+              handleModal={handleModal}
+              products={products}
+              handleDeleteItem={handleDeleteItem}
+              itemSelected={itemSelected}
+            />
+            <ModalItem
+              modalVisible={modalVisible}
+              itemSelected={itemSelected}
+              handleCloseModal={handleCloseModal}
+            />
+            <Footer>
+              <TouchableOpacity onPress={() => RootNavigation.navigate("Main")}>
+              
+              <View>
+                  <Entypo name="home" size={24} color="black" />
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => RootNavigation.navigate("Cafeteria")}
+              >
+                <View>
+                  <FontAwesome5 name="coffee" size={24} color="black" />
+                </View>
+              </TouchableOpacity>
+            </Footer>
+            <StatusBar style="dark" />
+          </View>
+        </TouchableWithoutFeedback>
+      </KeyboardAvoidingView>
     );
   }
 }

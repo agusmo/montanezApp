@@ -10,6 +10,9 @@ import styles from "../styles/appGeneralStyles";
 import Footer from "../components/Footer";
 import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
+import { Entypo, FontAwesome5 } from '@expo/vector-icons';
+
+
 
 export default function FoodFeedScreen({ props }) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -24,6 +27,7 @@ export default function FoodFeedScreen({ props }) {
     setInputText(text);
   };
 
+  
   const handleAddItem = () => {
     if (inputText) {
       setProducts([
@@ -45,7 +49,7 @@ export default function FoodFeedScreen({ props }) {
   };
 
   const handleModal = (id) => {
-    console.log(products);
+   
     setItemSelected(products.find((item) => item.id === id));
     setModalVisible(true);
   };
@@ -55,6 +59,7 @@ export default function FoodFeedScreen({ props }) {
     setModalVisible(false);
     setItemSelected({});
   };
+
 
   if (!dataLoaded) {
     return <AppLoading />;
@@ -84,15 +89,16 @@ export default function FoodFeedScreen({ props }) {
           handleCloseModal={handleCloseModal}
         />
         <Footer>
+    
         <TouchableOpacity onPress={()=> RootNavigation.navigate('Main')} >
-             <Text>
-              Home
-            </Text>
+             <View>
+             <Entypo name="home" size={24} color="black" />
+            </View>
           </TouchableOpacity>
           <TouchableOpacity onPress={()=> RootNavigation.navigate('Bakery')} >
-             <Text>
-              Bakery
-            </Text>
+             <View>
+             <FontAwesome5 name="cookie-bite" size={24} color="black" />
+            </View>
           </TouchableOpacity>
         </Footer>
         <StatusBar style="dark" />

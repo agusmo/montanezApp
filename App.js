@@ -11,6 +11,8 @@ import DrinksFeedScreen from "./screens/DrinksFeedScreen";
 import MainScreen from "./screens/MainScreen";
 import { navigationRef } from "./navigation/RootNavigation";
 
+
+
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -32,6 +34,7 @@ export default function App() {
               component={MainScreen}
               options={{ headerTitle: () => null }}
             />
+            
             <Stack.Screen
               name="Cafeteria"
               component={DrinksFeedScreen}
