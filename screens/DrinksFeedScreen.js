@@ -76,7 +76,6 @@ export default function FoodFeedScreen({ props }) {
           inputText={inputText}
           handleAddItem={handleAddItem}
         />
-
         <ProductLists
           handleModal={handleModal}
           products={products}

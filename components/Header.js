@@ -1,8 +1,6 @@
-import React, { useState, useEffect, Dimensions } from "react";
+import React from "react";
 import { View, Text } from "react-native";
 import styles from "../styles/headerStyles"
-
-
 
 const Header = ({ title }) => {
   return (
