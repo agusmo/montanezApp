@@ -19,14 +19,14 @@ import Footer from "../components/Footer";
 import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
 import { Entypo, FontAwesome5 } from "@expo/vector-icons";
-import Cart from "../screens/Cart"
+
 
 export default function FoodFeedScreen({ props }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [itemSelected, setItemSelected] = useState({});
   const [inputText, setInputText] = useState("");
   const [products, setProducts] = useState(mockData);
-  const [cart, setCart] = useState([]);
+
   const [dataLoaded] = useFonts({
     "PlayfairDisplay-VariableFont": require("../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf"),
   });
@@ -57,14 +57,6 @@ export default function FoodFeedScreen({ props }) {
     setItemSelected({});
   };
 
-  // const handleCartItem = (id) => {
-  //     setCart([
-  //       ...cart,
-  //       setItemSelected(products.find((item) => item.id === id))
-         
-  //     ]);
-  // };
-  // console.log(cart)
 
 
   const handleCloseModal = () => {
