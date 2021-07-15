@@ -20,7 +20,6 @@ import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
 import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 
-
 export default function FoodFeedScreen({ props }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [itemSelected, setItemSelected] = useState({});
@@ -50,14 +49,11 @@ export default function FoodFeedScreen({ props }) {
     setInputText("");
   };
 
- 
   const handleDeleteItem = (id) => {
     setProducts(products.filter((item) => item.id !== id));
     setModalVisible(false);
     setItemSelected({});
   };
-
-
 
   const handleCloseModal = () => {
     setModalVisible(false);
@@ -65,7 +61,6 @@ export default function FoodFeedScreen({ props }) {
   };
 
   const handleModal = (id) => {
- 
     setItemSelected(products.find((item) => item.id === id));
     setModalVisible(true);
   };
@@ -74,7 +69,6 @@ export default function FoodFeedScreen({ props }) {
     return <AppLoading />;
   } else {
     return (
-
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={styles.container}
@@ -100,8 +94,7 @@ export default function FoodFeedScreen({ props }) {
             />
             <Footer>
               <TouchableOpacity onPress={() => RootNavigation.navigate("Main")}>
-              
-              <View>
+                <View>
                   <Entypo name="home" size={24} color="black" />
                 </View>
               </TouchableOpacity>

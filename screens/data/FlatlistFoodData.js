@@ -2,6 +2,7 @@ const mockData = [
   {
     name: "Croissant",
     id: "1",
+    category: "1",
     price: "$5",
     description: "Clásico de la pastelería francesa",
     imageUrl:
@@ -10,6 +11,7 @@ const mockData = [
   {
     name: "Cannoli",
     id: "2",
+    category: "1",
     price: "$4",
     description: "Postre italiano relleno de crema",
     imageUrl:
@@ -18,6 +20,7 @@ const mockData = [
   {
     name: "Macaroons",
     id: "3",
+    category: "5",
     price: "$7",
     description: "Postre de la cocina francesa relleno de crema",
     imageUrl:
@@ -25,6 +28,7 @@ const mockData = [
   },
   {
     name: "Churros",
+    category: "1",
     id: "4",
     price: "$5",
     description: "Churros rellenos con dulce de leche",
@@ -34,6 +38,7 @@ const mockData = [
   {
     name: "Lemon Pie",
     id: "5",
+    category: "3",
     price: "$8",
     description: "Torta de limón con merengue",
     imageUrl:
@@ -42,6 +47,7 @@ const mockData = [
   {
     name: "Cheesecake",
     id: "6",
+    category: "3",
     price: "$8",
     description: "Torta de queso con frutos rojos",
     imageUrl:
