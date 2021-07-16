@@ -1,12 +1,14 @@
 import React from "react";
-import { StyleSheet, FlatList, View, TouchableOpacity } from "react-native";
+import { StyleSheet, FlatList, View, TouchableOpacity, Text } from "react-native";
 import categories from "./data/CategoriesCafeData";
 import CategoryItems from "../components/CategoryItems";
 import * as RootNavigation from "../navigation/RootNavigation";
 import Footer from "../components/Footer";
 import { Entypo, FontAwesome5 } from "@expo/vector-icons";
+import CarouselScreen from "../components/Carousel";
+import products from "./data/CategoriesCafeData";
 
-const CategoriesScreen = ({ navigation, route }) => {
+const CategoriesScreen = ({ navigation, handleModal }) => {
   const handleSelected = (item) => {
     navigation.navigate("Cafeteria", {
       categoryId: item.id,
@@ -20,6 +22,10 @@ const CategoriesScreen = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
+      <View>
+        <CarouselScreen products={products} handleModal={handleModal} />
+      </View>
+      <Text style={styles.title}>Categorías</Text>
       <FlatList
         data={categories}
         renderItem={renderItem}
@@ -47,6 +53,14 @@ const CategoriesScreen = ({ navigation, route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  title: {
+    color: "black",
+    textAlign: "center",
+    fontSize: 30,
+    fontFamily: "PlayfairDisplay-VariableFont",
+    marginHorizontal: 10,
+    padding: 5,
   },
 });
 
