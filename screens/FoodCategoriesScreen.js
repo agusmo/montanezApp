@@ -66,9 +66,8 @@ const styles = StyleSheet.create({
   title: {
     color: "black",
     textAlign: "center",
-    fontSize: 25,
+    fontSize: 29,
     fontFamily: "PlayfairDisplay-VariableFont",
-    marginTop: 10,
     marginHorizontal: 10,
     padding: 5,
    
