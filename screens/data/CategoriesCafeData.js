@@ -16,6 +16,7 @@ const categories = [
     id: "9",
     title: "Aguas",
   },
+
 ];
 
 export default categories;

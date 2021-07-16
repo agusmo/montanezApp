@@ -52,6 +52,15 @@ const mockData = [
     imageUrl:
       "https://media.istockphoto.com/photos/glass-of-water-on-isolate-background-picture-id1133156053?k=6&m=1133156053&s=612x612&w=0&h=d26nPovD4cmOvNAZZU8Bvm1w6T1AjhyLzI8qjpHqMVM=",
   },
+  {
+    name: "Té",
+    id: "10",
+    price: "$2",
+    category: "7",
+    description: "Te a elección (negro, chai, frutal)",
+    imageUrl:
+      "http://blogs.warwick.ac.uk/images/lucyyoung/2008/06/05/tea.jpg?maxWidth=500",
+  },
 ];
   
   export default mockData;

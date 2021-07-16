@@ -10,6 +10,7 @@ import Colors from "../constants/colors";
 const CategoryItems = ({ item, onSelected }) => {
   return (
     <View style={style.gridItem}>
+
       <TouchableOpacity
         onPress={() => {
           onSelected(item);
@@ -25,12 +26,13 @@ const CategoryItems = ({ item, onSelected }) => {
 const style = StyleSheet.create({
   gridItem: {
     flex: 1,
-    margin: 10,
+    marginVertical: 10,
+    marginHorizontal: 10,
     height: 150,
   },
   container: {
     flex: 1,
-    borderRadius: 10,
+    borderRadius: 15,
     justifyContent: "center",
     alignItems: "center",
     padding: 20,

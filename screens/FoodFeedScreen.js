@@ -20,6 +20,7 @@ import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
 import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 
+
 export default function FoodFeedScreen({ props, route }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [itemSelected, setItemSelected] = useState({});
@@ -100,7 +101,7 @@ export default function FoodFeedScreen({ props, route }) {
                 </View>
               </TouchableOpacity>
               <TouchableOpacity
-                onPress={() => RootNavigation.navigate("Cafeteria")}
+                onPress={() => RootNavigation.navigate("Cafeteria Categories")}
               >
                 <View>
                   <FontAwesome5 name="coffee" size={24} color="black" />

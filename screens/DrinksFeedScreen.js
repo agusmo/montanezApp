@@ -95,7 +95,7 @@ export default function FoodFeedScreen({ props, route }) {
                 </View>
               </TouchableOpacity>
               <TouchableOpacity
-                onPress={() => RootNavigation.navigate("Bakery")}
+                onPress={() => RootNavigation.navigate("Bakery Categories")}
               >
                 <View>
                   <FontAwesome5 name="cookie-bite" size={24} color="black" />
