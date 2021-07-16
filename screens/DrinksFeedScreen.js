@@ -14,7 +14,7 @@ import { Entypo, FontAwesome5 } from '@expo/vector-icons';
 
 
 
-export default function FoodFeedScreen({ props }) {
+export default function FoodFeedScreen({ props, route }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [itemSelected, setItemSelected] = useState({});
   const [inputText, setInputText] = useState("");
@@ -66,44 +66,46 @@ export default function FoodFeedScreen({ props }) {
   } else {
     return (
       <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
-      style={styles.container}
-    >
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <View style={styles.container}>
-        <SearchBar
-          handleChangeText={handleChangeText}
-          inputText={inputText}
-          handleAddItem={handleAddItem}
-        />
-        <ProductLists
-          handleModal={handleModal}
-          products={products}
-          handleDeleteItem={handleDeleteItem}
-          itemSelected={itemSelected}
-        />
-        <ModalItem
-          modalVisible={modalVisible}
-          itemSelected={itemSelected}
-          handleCloseModal={handleCloseModal}
-        />
-        <Footer>
-    
-        <TouchableOpacity onPress={()=> RootNavigation.navigate('Main')} >
-             <View>
-             <Entypo name="home" size={24} color="black" />
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={()=> RootNavigation.navigate('Bakery')} >
-             <View>
-             <FontAwesome5 name="cookie-bite" size={24} color="black" />
-            </View>
-          </TouchableOpacity>
-        </Footer>
-        <StatusBar style="dark" />
-      </View>
-      </TouchableWithoutFeedback>
-     </KeyboardAvoidingView>
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={styles.container}
+      >
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+          <View style={styles.container}>
+            <SearchBar
+              handleChangeText={handleChangeText}
+              inputText={inputText}
+              handleAddItem={handleAddItem}
+            />
+            <ProductLists
+              route={route}
+              handleModal={handleModal}
+              products={products}
+              handleDeleteItem={handleDeleteItem}
+              itemSelected={itemSelected}
+            />
+            <ModalItem
+              modalVisible={modalVisible}
+              itemSelected={itemSelected}
+              handleCloseModal={handleCloseModal}
+            />
+            <Footer>
+              <TouchableOpacity onPress={() => RootNavigation.navigate("Main")}>
+                <View>
+                  <Entypo name="home" size={24} color="black" />
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => RootNavigation.navigate("Bakery")}
+              >
+                <View>
+                  <FontAwesome5 name="cookie-bite" size={24} color="black" />
+                </View>
+              </TouchableOpacity>
+            </Footer>
+            <StatusBar style="dark" />
+          </View>
+        </TouchableWithoutFeedback>
+      </KeyboardAvoidingView>
     );
   }
 }

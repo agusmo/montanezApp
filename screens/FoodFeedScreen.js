@@ -20,7 +20,7 @@ import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
 import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 
-export default function FoodFeedScreen({ props }) {
+export default function FoodFeedScreen({ props, route }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [itemSelected, setItemSelected] = useState({});
   const [inputText, setInputText] = useState("");
@@ -82,6 +82,7 @@ export default function FoodFeedScreen({ props }) {
             />
 
             <ProductLists
+              route={route}
               handleModal={handleModal}
               products={products}
               handleDeleteItem={handleDeleteItem}

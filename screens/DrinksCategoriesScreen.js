@@ -3,11 +3,11 @@ import { StyleSheet, FlatList } from "react-native";
 import categories from "./data/CategoriesCafeData";
 import CategoryItems from "../components/CategoryItems";
 
-const CategoriesScreen = ({ navigation }) => {
+const CategoriesScreen = ({ navigation, route }) => {
   const handleSelected = (item) => {
     navigation.navigate("Cafeteria", {
-      id: item.id,
-      title: item,
+      categoryId: item.id,
+      title: item.title,
     });
   };
 

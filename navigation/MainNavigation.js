@@ -29,7 +29,7 @@ export default function MainNavigation() {
             name="Bakery Categories"
             component={FoodCategoriesScreen}
             options={{
-              title: "Bakery Categories",
+              title: "Bakery",
               headerTitleStyle: {
                 color: "black",
                 fontSize: 30 / fontScale,
@@ -41,7 +41,7 @@ export default function MainNavigation() {
             name="Cafeteria Categories"
             component={DrinksCategoriesScreen}
             options={{
-              title: "Cafeteria Categories",
+              title: "Coffee & more",
               headerTitleStyle: {
                 color: "black",
                 fontSize: 30 / fontScale,
