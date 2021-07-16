@@ -6,7 +6,6 @@ import {
   Dimensions,
 } from "react-native";
 import React, { useState, useEffect } from "react";
-import Card from "../components/flatListCard";
 import Carousel from "react-native-snap-carousel";
 
 
@@ -37,6 +36,10 @@ const CarouselScreen = (props) => {
       data={products}
       sliderWidth={400}
       itemWidth={500}
+      autoplay={true}
+      loop={true}
+      enableMomentum={false}
+      lockScrollWhileSnapping={true}
       renderItem={({ item }) => {
         return (
           <TouchableOpacity>
@@ -60,7 +63,7 @@ const styles = StyleSheet.create({
     marginLeft: 15,
   },
   imageStyles: {
-    width: Dimensions.get("window").width / 1,
+    width: Dimensions.get("window").width / 1.09,
     height: 200,
     borderRadius: 20,
   },
