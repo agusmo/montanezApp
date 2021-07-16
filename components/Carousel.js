@@ -1,40 +1,58 @@
-import{
+import {
   View,
   StyleSheet,
   Image,
   TouchableOpacity,
+  Dimensions,
 } from "react-native";
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../components/flatListCard";
 import Carousel from "react-native-snap-carousel";
 
+
 const CarouselScreen = (props) => {
+  const [isPortrait, setIsPortrait] = useState(true);
 
-  const { products  } = props;
-    return (
-      <Carousel
-        layout={"default"}
-        layoutCardOffset={`18`}
-        data={products}
-        sliderWidth={400}
-        itemWidth={500}
-        renderItem={({ item }) => {
-          return (
-            <TouchableOpacity>
-              <View style={styles.container}>
-                <Image
-                  style={styles.imageStyles}
-                  source={{ uri: item.image }}
-                />
-              </View>
-            </TouchableOpacity>
-          );
-        }}
-        keyExtractor={(item) => item.id}
-      />
-    );
+  const onPortrait = () => {
+    const dim = Dimensions.get("window");
+    return dim.height >= dim.width;
+  };
+
+  const statePortrait = () => setIsPortrait(onPortrait());
+
+  useEffect(() => {
+    Dimensions.addEventListener("change", statePortrait);
+    setIsPortrait(onPortrait());
+
+    return () => {
+      Dimensions.removeEventListener("change", statePortrait);
+    };
+  }, []);
+
+  const { products } = props;
+  return (
+    <Carousel
+      layout={"default"}
+      layoutCardOffset={`18`}
+      data={products}
+      sliderWidth={400}
+      itemWidth={500}
+      renderItem={({ item }) => {
+        return (
+          <TouchableOpacity>
+            <View style={styles.container}>
+              <Image
+                style={isPortrait ? styles.imageStyles : styles.imageStylesLS}
+                source={{ uri: item.image }}
+              />
+            </View>
+          </TouchableOpacity>
+        );
+      }}
+      keyExtractor={(item) => item.id}
+    />
+  );
 };
-
 
 const styles = StyleSheet.create({
   container: {
@@ -42,9 +60,13 @@ const styles = StyleSheet.create({
     marginLeft: 15,
   },
   imageStyles: {
-    width: 390,
+    width: Dimensions.get("window").width / 1,
     height: 200,
     borderRadius: 20,
+  },
+  imageStylesLS: {
+    width: null,
+    height: null
   },
 });
 

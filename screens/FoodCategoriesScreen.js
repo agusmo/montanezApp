@@ -4,6 +4,7 @@ import {
   FlatList,
   View,
   Text,
+  Dimensions,
   TouchableOpacity
 } from "react-native";
 import * as RootNavigation from "../navigation/RootNavigation";
@@ -14,6 +15,7 @@ import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 import products from "./data/CategoriesBakeryData"
 import CarouselScreen from "../components/Carousel";
 import colors from "../constants/colors";
+
 
 
 const CategoriesScreen = ({ navigation, handleModal, itemSelected }) => {
