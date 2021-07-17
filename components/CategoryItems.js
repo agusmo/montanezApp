@@ -4,8 +4,11 @@ import {
   TouchableOpacity,
   Text,
   StyleSheet,
+  Dimensions
 } from "react-native";
 import Colors from "../constants/colors";
+
+const { fontScale } = Dimensions.get("window");
 
 const CategoryItems = ({ item, onSelected }) => {
   return (
@@ -17,7 +20,8 @@ const CategoryItems = ({ item, onSelected }) => {
         }}
         style={style.container}
       >
-        <Text style={style.title}>{item.title}</Text>
+        <Text style={style.title}     ellipsizeMode="tail"
+                numberOfLines={1}>{item.title}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -39,7 +43,7 @@ const style = StyleSheet.create({
     backgroundColor: Colors.medium,
   },
   title: {
-    fontSize: 20,
+    fontSize: 20/fontScale,
     textAlign: "center",
     color: "white",
   },

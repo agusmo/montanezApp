@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, FlatList, View, TouchableOpacity, Text } from "react-native";
+import { StyleSheet, FlatList, View, TouchableOpacity, Text, Dimensions } from "react-native";
 import categories from "./data/CategoriesCafeData";
 import CategoryItems from "../components/CategoryItems";
 import * as RootNavigation from "../navigation/RootNavigation";
@@ -8,7 +8,9 @@ import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 import CarouselScreen from "../components/Carousel";
 import products from "./data/CategoriesCafeData";
 
-const CategoriesScreen = ({ navigation, handleModal }) => {
+const { fontScale } = Dimensions.get("window");
+
+const CategoriesScreen = ({ navigation }) => {
   const handleSelected = (item) => {
     navigation.navigate("Cafeteria", {
       categoryId: item.id,
@@ -23,7 +25,12 @@ const CategoriesScreen = ({ navigation, handleModal }) => {
   return (
     <View style={styles.container}>
       <View>
-        <CarouselScreen products={products} handleModal={handleModal} />
+        <CarouselScreen
+          categories={categories}
+          keyExtractor={(item) => item.id}
+          onSelected={handleSelected}
+          
+        />
       </View>
       <Text style={styles.title}>Categorías</Text>
       <FlatList
@@ -57,7 +64,7 @@ const styles = StyleSheet.create({
   title: {
     color: "black",
     textAlign: "center",
-    fontSize: 30,
+    fontSize: 29/fontScale,
     fontFamily: "PlayfairDisplay-VariableFont",
     marginHorizontal: 10,
     padding: 5,

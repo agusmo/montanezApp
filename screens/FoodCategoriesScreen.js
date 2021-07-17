@@ -5,7 +5,8 @@ import {
   View,
   Text,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
+  
 } from "react-native";
 import * as RootNavigation from "../navigation/RootNavigation";
 import categories from "./data/CategoriesBakeryData";
@@ -16,7 +17,7 @@ import products from "./data/CategoriesBakeryData"
 import CarouselScreen from "../components/Carousel";
 import colors from "../constants/colors";
 
-
+const { fontScale } = Dimensions.get("window");
 
 const CategoriesScreen = ({ navigation, handleModal, itemSelected }) => {
   const handleSelected = (item) => {
@@ -33,7 +34,10 @@ const CategoriesScreen = ({ navigation, handleModal, itemSelected }) => {
   return (
     <View style={styles.container}>
       <View>
-        <CarouselScreen products={products} handleModal={handleModal}
+        <CarouselScreen
+          categories={categories}
+          keyExtractor={(item) => item.id}
+          onSelected={handleSelected}
         />
       </View>
       <Text style={styles.title}>Categorías</Text>
@@ -68,7 +72,7 @@ const styles = StyleSheet.create({
   title: {
     color: "black",
     textAlign: "center",
-    fontSize: 29,
+    fontSize: 29/fontScale,
     fontFamily: "PlayfairDisplay-VariableFont",
     marginHorizontal: 10,
     padding: 5,

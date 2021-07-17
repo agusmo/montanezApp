@@ -8,8 +8,12 @@ import {
 import React, { useState, useEffect } from "react";
 import Carousel from "react-native-snap-carousel";
 
+const { fontScale } = Dimensions.get("window");
 
 const CarouselScreen = (props) => {
+
+ const { categories, onSelected } = props;
+
   const [isPortrait, setIsPortrait] = useState(true);
 
   const onPortrait = () => {
@@ -28,12 +32,12 @@ const CarouselScreen = (props) => {
     };
   }, []);
 
-  const { products } = props;
+ 
   return (
     <Carousel
       layout={"default"}
       layoutCardOffset={`18`}
-      data={products}
+      data={categories}
       sliderWidth={400}
       itemWidth={500}
       autoplay={true}
@@ -42,7 +46,11 @@ const CarouselScreen = (props) => {
       lockScrollWhileSnapping={true}
       renderItem={({ item }) => {
         return (
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              onSelected(item);
+            }}
+          >
             <View style={styles.container}>
               <Image
                 style={isPortrait ? styles.imageStyles : styles.imageStylesLS}
@@ -64,7 +72,7 @@ const styles = StyleSheet.create({
   },
   imageStyles: {
     width: Dimensions.get("window").width / 1.09,
-    height: 200,
+    height: 200/fontScale,
     borderRadius: 20,
   },
   imageStylesLS: {
