@@ -5,21 +5,22 @@ import {
   View,
   Text,
   Dimensions,
-  TouchableOpacity,
-  
+  TouchableOpacity,  
 } from "react-native";
 import * as RootNavigation from "../navigation/RootNavigation";
-import categories from "./data/CategoriesBakeryData";
+import { useSelector, useDispatch } from "react-redux";
 import CategoryItems from "../components/CategoryItems";
 import Footer from "../components/Footer";
 import { Entypo, FontAwesome5 } from "@expo/vector-icons";
-import products from "./data/CategoriesBakeryData"
 import CarouselScreen from "../components/Carousel";
-import colors from "../constants/colors";
+
 
 const { fontScale } = Dimensions.get("window");
 
 const CategoriesScreen = ({ navigation, handleModal, itemSelected }) => {
+
+    const bakeryCategories = useSelector((state) => state.categoriesBakery.list);
+
   const handleSelected = (item) => {
     navigation.navigate("Bakery", {
       categoryId: item.id,
@@ -35,14 +36,14 @@ const CategoriesScreen = ({ navigation, handleModal, itemSelected }) => {
     <View style={styles.container}>
       <View>
         <CarouselScreen
-          categories={categories}
+          categories={bakeryCategories}
           keyExtractor={(item) => item.id}
           onSelected={handleSelected}
         />
       </View>
       <Text style={styles.title}>Categorías</Text>
       <FlatList
-        data={categories}
+        data={bakeryCategories}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
         numColumns={2}

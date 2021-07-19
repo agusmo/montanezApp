@@ -1,19 +1,22 @@
 import React from "react";
 import { StyleSheet, FlatList, View, TouchableOpacity, Text, Dimensions } from "react-native";
-import categories from "./data/CategoriesCafeData";
+import { useSelector, useDispatch } from "react-redux";
 import CategoryItems from "../components/CategoryItems";
 import * as RootNavigation from "../navigation/RootNavigation";
 import Footer from "../components/Footer";
 import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 import CarouselScreen from "../components/Carousel";
-import products from "./data/CategoriesCafeData";
+import { selectCafeCategory } from "../store/actions/category.cafe.action";
 
 const { fontScale } = Dimensions.get("window");
 
 const CategoriesScreen = ({ navigation }) => {
+  const dispatch = useDispatch();
+  const drinksCategories = useSelector(state => state.categoriesCafe.list);
+
   const handleSelected = (item) => {
+    dispatch(selectCafeCategory(item.id));
     navigation.navigate("Cafeteria", {
-      categoryId: item.id,
       title: item.title,
     });
   };
@@ -26,15 +29,14 @@ const CategoriesScreen = ({ navigation }) => {
     <View style={styles.container}>
       <View>
         <CarouselScreen
-          categories={categories}
+          categories={drinksCategories}
           keyExtractor={(item) => item.id}
           onSelected={handleSelected}
-          
         />
       </View>
       <Text style={styles.title}>Categorías</Text>
       <FlatList
-        data={categories}
+        data={drinksCategories}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
         numColumns={2}
