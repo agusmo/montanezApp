@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { View, TouchableOpacity, Text, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard } from "react-native";
-import ProductLists from "../components/ProductFlatList";
+import ProductLists from "../components/ProductFlatListCafe";
 import * as RootNavigation from "../navigation/RootNavigation"
 import SearchBar from "../components/SearchBar";
 import ModalItem from "./Modal";

@@ -1,7 +1,7 @@
 import categories from "../../screens/data/CategoriesCafeData";
 import { SELECT_CAFE_CATEGORY } from "../actions/category.cafe.action";
 
-console.log(categories)
+
 
 const INITIAL_STATE = {
   list: categories,
