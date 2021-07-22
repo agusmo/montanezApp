@@ -13,15 +13,17 @@ import CategoryItems from "../components/CategoryItems";
 import Footer from "../components/Footer";
 import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 import CarouselScreen from "../components/Carousel";
+import { selectBakeryCategory } from "../store/actions/category.bakery.action";
 
 
 const { fontScale } = Dimensions.get("window");
 
 const CategoriesScreen = ({ navigation, handleModal, itemSelected }) => {
-
+ const dispatch = useDispatch();
     const bakeryCategories = useSelector((state) => state.categoriesBakery.list);
 
   const handleSelected = (item) => {
+       dispatch(selectBakeryCategory(item.id));
     navigation.navigate("Bakery", {
       categoryId: item.id,
       title: item.title,

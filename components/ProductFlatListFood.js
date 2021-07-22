@@ -17,8 +17,7 @@ const ProductLists = (props) => {
   const category = useSelector((state) => state.categoriesBakery.selected);
 
   useEffect(() => {
-    dispatch(filterBakery(category))
-   
+    dispatch(filterBakery(category.id));
   }, []);
 
   return (
