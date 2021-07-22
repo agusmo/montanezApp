@@ -21,6 +21,9 @@ const CategoriesScreen = ({ navigation }) => {
     });
   };
 
+
+
+
   const renderItem = ({ item }) => (
     <CategoryItems item={item} onSelected={handleSelected} />
   );

@@ -54,7 +54,7 @@ const mockData = [
   },
   {
     name: "Té",
-    id: "10",
+    id: "7",
     price: "$2",
     category: "7",
     description: "Te a elección (negro, chai, frutal)",

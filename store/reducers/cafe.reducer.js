@@ -13,6 +13,7 @@ const CafeReducer = (state = INITIAL_STATE, action) => {
         return {
           ...state,
           selected: state.list.find((cafe) => cafe.id === action.cafeID),
+          
         };
       case FILTER_CAFE:
         return {

@@ -7,9 +7,9 @@ export const selectCafe = (id) => ([{
     cafeID: id
 }])
 
-export const filterCafe = (id) => [
+export const filterCafe = (id) => (
   {
     type: FILTER_CAFE,
     categoryID: id,
-  },
-];
+  })
+

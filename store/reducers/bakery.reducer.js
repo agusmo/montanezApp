@@ -1,5 +1,5 @@
-import { mockData } from "../../screens/data/FlatlistFoodData";
-import { FILTER_BAKERY, SELECT_BAKERY } from "../actions/bakery.action";
+import mockData  from "../../screens/data/FlatlistFoodData";
+import {  SELECT_BAKERY, FILTER_BAKERY } from "../actions/bakery.action";
 
 const INITIAL_STATE = {
   list: mockData,

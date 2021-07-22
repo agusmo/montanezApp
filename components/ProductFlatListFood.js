@@ -6,17 +6,19 @@ import CustomButton from "./CustomButton";
 import { useSelector, useDispatch } from "react-redux";
 import { filterBakery, selectBakery } from "../store/actions/bakery.action";
 
+
 const ProductLists = (props) => {
   const { handleModal, products, handleDeleteItem, route } = props;
   const productImage =
     "https://previews.123rf.com/images/decobrush/decobrush1711/decobrush171100011/90847145-cupcake-icon-icono-de-cumplea%C3%B1os-s%C3%ADmbolo-de-vacaciones-y-amor-d%C3%ADa-de-san-valent%C3%ADn-l%C3%ADnea-delgada-muestra-vector-.jpg";
 
   const dispatch = useDispatch();
-  const categoryBakery = useSelector((state) => state.bakery.filterBakery);
+  const categoryBakery = useSelector((state) => state.bakery.filteredBakery);
   const category = useSelector((state) => state.categoriesBakery.selected);
 
   useEffect(() => {
-    dispatch(filterBakery(category.id));
+    dispatch(filterBakery(category))
+   
   }, []);
 
   return (

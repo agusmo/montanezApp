@@ -82,7 +82,6 @@ export default function FoodFeedScreen({ props, route }) {
             />
 
             <ProductLists
-              route={route}
               handleModal={handleModal}
               products={products}
               handleDeleteItem={handleDeleteItem}

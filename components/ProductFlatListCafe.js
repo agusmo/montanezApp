@@ -21,7 +21,7 @@ const ProductLists = (props) => {
 
   
    const dispatch = useDispatch();
-   const categoryCafe = useSelector((state) => state.cafe.filterCafe);
+   const categoryCafe = useSelector((state) => state.cafe.filteredCafe);
    const category = useSelector((state) => state.categoriesCafe.selected);
 
    useEffect(() => {
