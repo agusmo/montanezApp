@@ -2,7 +2,7 @@ const mockData = [
   {
     name: "Café",
     id: "1",
-    price: "$3",
+    price: 3,
     category: "6",
     description: "Granos molidos de Colombia",
     imageUrl: "https://thumbs.dreamstime.com/b/taza-de-caf%C3%A9-35737898.jpg",
@@ -10,7 +10,7 @@ const mockData = [
   {
     name: "Café Latte",
     id: "2",
-    price: "$3.5",
+    price: 3.5,
     category: "6",
     description: "Café con leche",
     imageUrl:
@@ -19,7 +19,7 @@ const mockData = [
   {
     name: "Café helado",
     id: "3",
-    price: "$4",
+    price: 4,
     category: "6",
     description: "Café con leche frío",
     imageUrl:
@@ -28,7 +28,7 @@ const mockData = [
   {
     name: "Jugo de Naranja",
     id: "4",
-    price: "$3",
+    price: 3,
     category: "8",
     description: "Naranjas exprimidas",
     imageUrl:
@@ -37,7 +37,7 @@ const mockData = [
   {
     name: "Jugo de Manzana",
     id: "5",
-    price: "$8",
+    price: 8,
     category: "8",
     description: "Jugo de manzanas rojas",
     imageUrl:
@@ -46,7 +46,7 @@ const mockData = [
   {
     name: "Agua",
     id: "6",
-    price: "$8",
+    price: 8,
     category: "9",
     description: "Agua mineral fresca",
     imageUrl:
@@ -55,7 +55,7 @@ const mockData = [
   {
     name: "Té",
     id: "7",
-    price: "$2",
+    price: 2,
     category: "7",
     description: "Te a elección (negro, chai, frutal)",
     imageUrl:

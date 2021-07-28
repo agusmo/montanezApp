@@ -18,7 +18,7 @@ import { selectBakeryCategory } from "../store/actions/category.bakery.action";
 
 const { fontScale } = Dimensions.get("window");
 
-const CategoriesScreen = ({ navigation, handleModal, itemSelected }) => {
+const CategoriesScreen = ({ navigation }) => {
  const dispatch = useDispatch();
     const bakeryCategories = useSelector((state) => state.categoriesBakery.list);
 

@@ -10,6 +10,7 @@ import MainScreen from "../screens/MainScreen";
 import { navigationRef } from "../navigation/RootNavigation";
 import FoodCategoriesScreen from "../screens/FoodCategoriesScreen";
 import DrinksCategoriesScreen from "../screens/DrinksCategoriesScreen";
+import CartScreen from "../screens/CartScreen";
 
 const Stack = createStackNavigator();
 
@@ -65,6 +66,17 @@ export default function MainNavigation() {
           <Stack.Screen
             name="Bakery"
             component={FoodFeedScreen}
+            options={{
+              headerTitleStyle: {
+                color: "black",
+                fontSize: 30 / fontScale,
+                fontFamily: "PlayfairDisplay-VariableFont",
+              },
+            }}
+          />
+          <Stack.Screen
+            name="Carrito"
+            component={CartScreen}
             options={{
               headerTitleStyle: {
                 color: "black",

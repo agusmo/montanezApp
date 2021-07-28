@@ -14,7 +14,7 @@ import { Entypo, FontAwesome5 } from '@expo/vector-icons';
 
 
 
-export default function FoodFeedScreen({ props, route }) {
+export default function FoodFeedScreen({ navigation, route }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [itemSelected, setItemSelected] = useState({});
   const [inputText, setInputText] = useState("");
@@ -54,11 +54,8 @@ export default function FoodFeedScreen({ props, route }) {
     setModalVisible(true);
   };
 
-  const handleDeleteItem = (id) => {
-    setProducts(products.filter((item) => item.id !== id));
-    setModalVisible(false);
-    setItemSelected({});
-  };
+ 
+  const handleShowCart = () => navigation.push("Carrito");
 
 
   if (!dataLoaded) {
@@ -80,7 +77,7 @@ export default function FoodFeedScreen({ props, route }) {
               route={route}
               handleModal={handleModal}
               products={products}
-              handleDeleteItem={handleDeleteItem}
+             
               itemSelected={itemSelected}
             />
             <ModalItem
@@ -99,6 +96,13 @@ export default function FoodFeedScreen({ props, route }) {
               >
                 <View>
                   <FontAwesome5 name="cookie-bite" size={24} color="black" />
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={handleShowCart}
+              >
+                <View>
+                  <FontAwesome5 name="shopping-cart" size={20} color="black" />
                 </View>
               </TouchableOpacity>
             </Footer>

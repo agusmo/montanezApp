@@ -10,11 +10,13 @@ import Card from "../components/flatListCard";
 import CustomButton from "./CustomButton";
  import { useSelector, useDispatch } from "react-redux";
 import { filterCafe, selectCafe } from "../store/actions/cafe.action";
+import { addItem } from "../store/actions/cart.action";
 
 
 const ProductLists = (props) => {
-
-
+   
+  
+   
   const { handleModal, products, handleDeleteItem, route } = props;
   const productImage =
     "https://previews.123rf.com/images/decobrush/decobrush1711/decobrush171100011/90847145-cupcake-icon-icono-de-cumplea%C3%B1os-s%C3%ADmbolo-de-vacaciones-y-amor-d%C3%ADa-de-san-valent%C3%ADn-l%C3%ADnea-delgada-muestra-vector-.jpg";
@@ -23,6 +25,10 @@ const ProductLists = (props) => {
    const dispatch = useDispatch();
    const categoryCafe = useSelector((state) => state.cafe.filteredCafe);
    const category = useSelector((state) => state.categoriesCafe.selected);
+   const item = useSelector((state) => state.cafe.selected);
+ 
+   const handleAddItem = () => dispatch(addItem(item));
+  
 
    useEffect(() => {
      dispatch(filterCafe(category.id));
@@ -53,8 +59,8 @@ const ProductLists = (props) => {
                 {item.name}
               </Text>
               <CustomButton style={styles.customButtonStyles}>
-                <TouchableOpacity onPress={() => handleDeleteItem(item.id)}>
-                  <Text style={styles.buttonTextStyles}>X</Text>
+                <TouchableOpacity onPress={handleAddItem}>
+                  <Text style={styles.buttonTextStyles}>+</Text>
                 </TouchableOpacity>
               </CustomButton>
             </Card>
