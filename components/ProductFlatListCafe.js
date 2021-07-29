@@ -14,7 +14,7 @@ import { addItem } from "../store/actions/cart.action";
 
 
 const ProductLists = (props) => {
-   
+    
   
    
   const { handleModal, products, handleDeleteItem, route } = props;
@@ -32,7 +32,9 @@ const ProductLists = (props) => {
 
    useEffect(() => {
      dispatch(filterCafe(category.id));
+  
    }, []);
+  
   
 
   return (
